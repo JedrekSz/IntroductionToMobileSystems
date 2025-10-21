@@ -2,4 +2,5 @@
     <string name="app_name">IntroductionToMobileSystems</string>
     <string name="ifrog">IFrog</string>
     <string name="menu">Menu</string>
+    <string name="aboutApp">This app is a calendar that allows you to schedule events with location support. You can add meetings, reminders, and track your tasks easily and intuitively.</string>
 </resources>
