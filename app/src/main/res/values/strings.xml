@@ -1,8 +1,29 @@
 <resources>
     <string name="app_name">IntroductionToMobileSystems</string>
-    <string name="ifrog">IFrog</string>
+    <string name="Habitat">IFrog</string>
     <string name="menu">Menu</string>
-    <string name="aboutApp">This app is a calendar that allows you to schedule events with location support. You can add meetings, reminders, and track your tasks easily and intuitively.</string>
+    <string name="aboutApp">This app is meant to help people with forming good habits and preserving them   xd</string>
+    <string name="habitat">HABITAT</string>
+    <string name="isYourHabitGood">your habitat is good / bad</string>
+    <string name="frog">frog</string>
+    <string name="drink_some_water_your_lips_dry">drink some water, your lips dry</string>
+    <string name="background_graphic_gets_better_with_more_habits">(background graphic gets better with more habits)</string>
+    <string name="habit_list">Habit List</string>
+    <string name="new_habit">NEW HABIT</string>
+    <string name="habitName">Enter habit name</string>
+    <string name="newHabitImage">Mini Frog</string>
+    <string name="add">ADD</string>
+    <string name="home">Home</string>
+    <string name="habitList">Habit List</string>
+    <string name="newHabit">New Habit</string>
+    <string name="profile">Profile</string>
+    <string name="profileText">TEXT HERE</string>
+    <string name="personalized">Personalized</string>
+    <string name="habitsButton">Habits</string>
+    <string name="forgFactsButton">Frog Facts</string>
+    <string name="newHabitButton">New Habit</string>
+    <string name="profileButton">Profile</string>
+    <string name="notifications">Notifications</string>
     <string-array name="frequencies">
         <item>daily</item>
         <item>weekly</item>

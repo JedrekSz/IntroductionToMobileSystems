@@ -22,7 +22,6 @@ public class HabitsStorage {
         String s = prefs.getString(KEY, null);
         List<Habit> list = new ArrayList<>();
         if (s == null) {
-            // przykładowe dane startowe
             list.add(new Habit("lorem ipsum","daily",true,false));
             list.add(new Habit("froggen machen","weekly",true,false));
             list.add(new Habit("water drinken","daily",true,true));

@@ -13,7 +13,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HABITAT"
+        android:text="@string/habitat"
         android:textSize="28sp"
         android:textStyle="bold" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="your habitat is good / bad idk"
+        android:text="@string/isYourHabitGood"
         android:layout_marginTop="4dp" />
 
 
@@ -39,7 +39,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/frog_image"
-            android:contentDescription="frog" />
+            android:contentDescription="@string/frog" />
 
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="drink some water, your legs dry"
+            android:text="@string/drink_some_water_your_lips_dry"
             android:background="@color/white"
             android:padding="8dp"
             android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
         android:id="@+id/tvNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(background graphic gets better with more habits)"
+        android:text="@string/background_graphic_gets_better_with_more_habits"
         android:layout_marginTop="8dp"
         android:textStyle="italic" />
 
@@ -68,7 +68,7 @@
         android:id="@+id/btnHabitList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Habit List"
+        android:text="@string/habit_list"
         android:layout_marginTop="16dp" />
 
 

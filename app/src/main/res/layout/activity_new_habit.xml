@@ -8,28 +8,25 @@
     android:padding="16dp"
     tools:context=".NewHabitActivity">
 
-    <!-- Tytuł -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEW HABIT"
+        android:text="@string/new_habit"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="16dp"/>
 
-    <!-- Pole tekstowe na nazwę nawyku -->
     <EditText
         android:id="@+id/etHabitName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter habit name"
+        android:hint="@string/habitName"
         android:padding="12dp"
         android:background="@android:drawable/edit_text"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Sekcja częstotliwości + miniatura żaby -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,16 +34,16 @@
         android:gravity="center_vertical"
         android:layout_marginBottom="16dp">
 
-        <!-- Miniatura żaby -->
+
         <ImageView
             android:id="@+id/imgMiniFrog"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/frog_image"
-            android:contentDescription="Mini Frog"
+            android:contentDescription="@string/newHabitImage"
             android:layout_marginEnd="12dp"/>
 
-        <!-- Spinner częstotliwości -->
+
         <Spinner
             android:id="@+id/spinnerFreq"
             android:layout_width="0dp"
@@ -55,28 +52,27 @@
             android:entries="@array/frequencies"/>
     </LinearLayout>
 
-    <!-- Przełącznik powiadomień -->
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchNotifs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notifications"
+        android:text="@string/notifications"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Przycisk ADD -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADD"
+        android:text="@string/add"
         android:backgroundTint="@color/purple_500"
         android:textColor="@android:color/white"
         android:padding="12dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Dolny pasek nawigacji -->
+
     <LinearLayout
         android:id="@+id/bottom_nav"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
@@ -86,31 +82,35 @@
 
         <Button
             android:id="@+id/btn_nav_home"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Home"/>
+            android:text="@string/home" />
 
         <Button
             android:id="@+id/btn_nav_list"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Habit List"/>
+            android:text="@string/habitList" />
 
         <Button
             android:id="@+id/btn_nav_new"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="New Habit"/>
+            android:text="@string/newHabit" />
 
         <Button
             android:id="@+id/btn_nav_profile"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Profile"/>
+            android:text="@string/profile"/>
     </LinearLayout>
 
 </LinearLayout>
