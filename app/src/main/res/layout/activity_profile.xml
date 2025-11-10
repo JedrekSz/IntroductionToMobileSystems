@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_profile"
@@ -31,7 +37,7 @@
         android:id="@+id/tvProfileText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/profileText"
+        android:text="Kenny's Fun Facts"
         android:padding="12dp"
         android:background="@android:drawable/edit_text"
         android:layout_marginBottom="16dp"/>
@@ -41,7 +47,7 @@
         android:id="@+id/imgFrog"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/frog_image"
+        android:src="@drawable/button_settings"
         android:contentDescription="@string/frog"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>
@@ -54,14 +60,14 @@
         android:gravity="center"
         android:layout_marginBottom="24dp">
 
-        <Button
+       <!-- <Button
             android:id="@+id/btn_personalized"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/personalized"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp" /> -->
 
         <Button
             android:id="@+id/btn_habits"
@@ -69,7 +75,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/habitsButton"
+            android:text="Habit Facts"
             android:layout_marginEnd="8dp" />
 
         <Button
@@ -78,11 +84,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/forgFactsButton"/>
+            android:text="Frog Facts"/>
     </LinearLayout>
 
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/bottom_nav"
         style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
@@ -123,6 +129,95 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/profileButton"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
 </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manager"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Creator"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Kenny"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Settings"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_manager"
+                android:scaleType="fitCenter"/>
+
+
+            <ImageButton
+                android:id="@+id/cbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_creator"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/kbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_kenny_p"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/sbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_settings"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

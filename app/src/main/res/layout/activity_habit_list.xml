@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,3 +49,93 @@
 
 
 </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manager"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Creator"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Kenny"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Settings"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_manager"
+                android:scaleType="fitCenter"/>
+
+
+            <ImageButton
+                android:id="@+id/cbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_creator"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/kbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_kenny"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/sbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="94.875dp"
+                android:layout_height="94.875dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/button_settings"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
