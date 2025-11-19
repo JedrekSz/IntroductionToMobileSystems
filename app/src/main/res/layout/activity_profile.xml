@@ -2,11 +2,11 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:id="@+id/activity_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,23 +14,30 @@
     android:padding="16dp"
     tools:context=".ProfileActivity">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/habitat"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
 
-    <Button
-        android:id="@+id/btn_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HABITAT"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_home_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="home" />
+    </LinearLayout>
 
 
     <TextView
@@ -45,12 +52,12 @@
 
     <ImageView
         android:id="@+id/imgFrog"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/button_settings"
-        android:contentDescription="@string/frog"
+        android:layout_width="345dp"
+        android:layout_height="311dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/frog"
+        android:src="@drawable/kenny" />
 
     <LinearLayout
         style="?android:attr/buttonBarStyle"
@@ -76,7 +83,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Habit Facts"
-            android:layout_marginEnd="8dp" />
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="8dp"/>
 
         <Button
             android:id="@+id/btn_frog_facts"
@@ -84,7 +95,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Frog Facts"/>
+            android:text="Frog Facts"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="8dp"/>
     </LinearLayout>
 
 
