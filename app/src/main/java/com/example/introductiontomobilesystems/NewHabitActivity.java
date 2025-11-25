@@ -1,14 +1,17 @@
 package com.example.introductiontomobilesystems;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import java.util.List;
 
@@ -23,8 +26,13 @@ public class NewHabitActivity extends AppCompatActivity {
         storage = new HabitsStorage(this);
         EditText etName = findViewById(R.id.etHabitName);
         Spinner spinner = findViewById(R.id.spinnerFreq);
-        Switch swNotifs = findViewById(R.id.switchNotifs);
+        SwitchCompat swNotifs = findViewById(R.id.switchNotifs);
         Button btnAdd = findViewById(R.id.btnAdd);
+
+        ImageButton cbutton = findViewById(R.id.cbutton), kbutton = findViewById(R.id.kbutton);
+
+        cbutton.setOnClickListener(v -> startActivity(new Intent(this, NewHabitActivity.class)));
+        kbutton.setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
 
         btnAdd.setOnClickListener(v -> {
             String name = etName.getText().toString().trim();
@@ -41,10 +49,6 @@ public class NewHabitActivity extends AppCompatActivity {
             finish();
         });
 
-        View nav = findViewById(R.id.bottom_nav);
-        nav.findViewById(R.id.btn_nav_home).setOnClickListener(v -> startActivity(new android.content.Intent(this, MainActivity.class)));
-        nav.findViewById(R.id.btn_nav_list).setOnClickListener(v -> startActivity(new android.content.Intent(this, HabitListActivity.class)));
-        nav.findViewById(R.id.btn_nav_new).setOnClickListener(v -> {});
-        nav.findViewById(R.id.btn_nav_profile).setOnClickListener(v -> startActivity(new android.content.Intent(this, ProfileActivity.class)));
+
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +16,8 @@ public class HabitListActivity extends AppCompatActivity {
     HabitsStorage storage;
     List<Habit> habits;
     HabitAdapter adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +33,17 @@ public class HabitListActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
 
         Button btnHome = findViewById(R.id.btn_home_back);
+        ImageButton cbutton = findViewById(R.id.cbutton), kbutton = findViewById(R.id.kbutton);
+
         btnHome.setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
 
-        View nav = findViewById(R.id.bottom_nav);
-        nav.findViewById(R.id.btn_nav_home).setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
-        nav.findViewById(R.id.btn_nav_list).setOnClickListener(v -> {});
-        nav.findViewById(R.id.btn_nav_new).setOnClickListener(v -> startActivity(new Intent(this, NewHabitActivity.class)));
-        nav.findViewById(R.id.btn_nav_profile).setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
+        cbutton.setOnClickListener(v -> startActivity(new Intent(this, NewHabitActivity.class)));
+        kbutton.setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
+
     }
+
+
+
 
     @Override
     protected void onResume() {
