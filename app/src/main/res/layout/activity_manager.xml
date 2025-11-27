@@ -29,11 +29,7 @@
                 android:textStyle="bold" />
 
 
-            <Button
-                android:id="@+id/btn_home_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="home" />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -41,86 +37,104 @@
     <LinearLayout
         android:id="@+id/buttonLayout"
         style="?android:attr/buttonBarStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_alignParentBottom="true">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Home"
+                android:textSize="12sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Manager"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textSize="12sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Creator"
                 android:gravity="center"
-                />
+                android:textSize="12sp"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Kenny"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Settings"/>
+                android:text="Kenny"
+                android:textSize="12sp"/>
+
+
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <ImageButton
-                android:id="@+id/mbutton"
+                android:id="@+id/btn_home_back"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="94.875dp"
-                android:layout_height="94.875dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/button_manager_p"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="Home Button"
+                android:src="@drawable/button_base"
                 android:scaleType="fitCenter"/>
 
 
             <ImageButton
+                android:id="@+id/mbutton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="Manager Button"
+                android:src="@drawable/button_manager_p"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
                 android:id="@+id/cbutton"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="94.875dp"
-                android:layout_height="94.875dp"
-                android:contentDescription="TODO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="Creator Button"
                 android:src="@drawable/button_creator"
                 android:scaleType="fitCenter"/>
 
             <ImageButton
                 android:id="@+id/kbutton"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="94.875dp"
-                android:layout_height="94.875dp"
-                android:contentDescription="TODO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="Kenny Button"
                 android:src="@drawable/button_kenny"
                 android:scaleType="fitCenter"/>
 
-            <ImageButton
-                android:id="@+id/sbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="94.875dp"
-                android:layout_height="94.875dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/button_settings"
-                android:scaleType="fitCenter"/>
+
+
+
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
