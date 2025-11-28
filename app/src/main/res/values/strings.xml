@@ -24,7 +24,7 @@
     <string name="newHabitButton">New Habit</string>
     <string name="profileButton">Profile</string>
     <string name="notifications">Notifications</string>
-    <string name="kenny_s_fun_facts">Capstone Project is very difficult! You should explode.</string>
+    <string name="kenny_s_fun_facts">I\'m Kenny! What would you like to know more about?</string>
     <string-array name="frequencies">
         <item>daily</item>
         <item>weekly</item>
@@ -38,5 +38,16 @@
         <item>Get enough rest</item>
         <item>Organize your work</item>
         <item>Boneless chicken</item>
+    </string-array>
+    <string-array name="habit_facts">
+        <item>Habit good</item>
+        <item>Idk ask gemini xddddddd</item>
+    </string-array>
+    <string-array name="frog_facts">
+        <item>Frogger Overwatch 2</item>
+        <item>Bazinga</item>
+        <item>Meow</item>
+        <item>Ribbit</item>
+        <item>The Fitness Gram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. </item>
     </string-array>
 </resources>
