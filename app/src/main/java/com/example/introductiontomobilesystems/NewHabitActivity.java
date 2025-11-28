@@ -29,9 +29,13 @@ public class NewHabitActivity extends AppCompatActivity {
         SwitchCompat swNotifs = findViewById(R.id.switchNotifs);
         Button btnAdd = findViewById(R.id.btnAdd);
 
-        ImageButton cbutton = findViewById(R.id.cbutton), kbutton = findViewById(R.id.kbutton);
+        ImageButton cbutton = findViewById(R.id.cbutton), kbutton = findViewById(R.id.kbutton), mbutton = findViewById(R.id.mbutton), hbutton = findViewById(R.id.btn_home_back);
+        //Button btnList = findViewById(R.id.btnHabitList);
 
-        cbutton.setOnClickListener(v -> startActivity(new Intent(this, NewHabitActivity.class)));
+
+        hbutton.setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
+        mbutton.setOnClickListener(v -> startActivity(new Intent(this, ManagerActivity.class)));
+        //cbutton.setOnClickListener(v -> startActivity(new Intent(this, NewHabitActivity.class)));
         kbutton.setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
 
         btnAdd.setOnClickListener(v -> {
