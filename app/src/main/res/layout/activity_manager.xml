@@ -94,7 +94,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Home Button"
-                android:src="@drawable/button_base"
+                android:src="@drawable/button_home"
                 android:scaleType="fitCenter"/>
 
 

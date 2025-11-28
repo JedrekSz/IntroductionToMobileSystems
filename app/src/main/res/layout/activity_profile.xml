@@ -40,14 +40,25 @@
         android:layout_height="wrap_content"
         android:text="Kenny's Fun Facts"
         android:padding="12dp"
-        android:background="@android:drawable/edit_text"
+
         android:layout_marginBottom="16dp"/>
+    <TextView
+    android:id="@+id/funFact"
+        android:textSize="22sp"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:text="@string/kenny_s_fun_facts"
+    android:padding="12dp"
+    android:background="@android:drawable/edit_text"
+    android:layout_marginBottom="16dp"/>
+
+
 
 
     <ImageView
         android:id="@+id/imgFrog"
-        android:layout_width="345dp"
-        android:layout_height="311dp"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/frog"
@@ -203,7 +214,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Home Button"
-                android:src="@drawable/button_base"
+                android:src="@drawable/button_home"
                 android:scaleType="fitCenter"/>
 
 

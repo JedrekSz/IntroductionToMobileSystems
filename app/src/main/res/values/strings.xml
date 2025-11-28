@@ -6,7 +6,7 @@
     <string name="habitat">HABITAT</string>
     <string name="isYourHabitGood">your habitat is good / bad</string>
     <string name="frog">frog</string>
-    <string name="drink_some_water_your_lips_dry">drink some water, your lips dry</string>
+    <string name="drink_some_water_your_lips_dry">Hourly tip</string>
     <string name="background_graphic_gets_better_with_more_habits">(background graphic gets better with more habits)</string>
     <string name="habit_list">Habit List</string>
     <string name="new_habit">NEW HABIT</string>
@@ -24,6 +24,7 @@
     <string name="newHabitButton">New Habit</string>
     <string name="profileButton">Profile</string>
     <string name="notifications">Notifications</string>
+    <string name="kenny_s_fun_facts">Capstone Project is very difficult! You should explode.</string>
     <string-array name="frequencies">
         <item>daily</item>
         <item>weekly</item>
