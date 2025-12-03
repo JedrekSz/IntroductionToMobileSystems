@@ -25,6 +25,8 @@
         <activity android:name=".HabitListActivity" android:exported="false" />
         <activity android:name=".NewHabitActivity" android:exported="false" />
         <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".ManagerActivity" android:exported="false" />
+
 
     </application>
 </manifest>
