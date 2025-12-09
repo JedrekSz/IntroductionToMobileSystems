@@ -46,4 +46,5 @@ dependencies {
     val nav_version = "2.8.2"
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
+    implementation("androidx.work:work-runtime:2.9.0")
 }

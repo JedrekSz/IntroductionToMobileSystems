@@ -1,91 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_new_habit"
+    android:layout_height="match_parent"
+    tools:context=".ManagerActivity"> <LinearLayout
+    android:id="@+id/mainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/buttonLayout"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".NewHabitActivity">
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-
-            <TextView
-                android:id="@+id/tvHeader"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="HABITAT"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-
-
-        </LinearLayout>
-
+            android:layout_weight="1"
+            android:text="HABITAT MANAGER"
+            android:textSize="22sp"
+            android:textStyle="bold" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHabitList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttonLayout"
         style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:padding="16dp"
-        android:layout_alignParentBottom="true">
+        android:background="#FAFAFA"> <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Home"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Manager"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Creator"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Kenny"
-                android:textSize="12sp"/>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Home"
+            android:textSize="12sp" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Manager"
+            android:textSize="12sp" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Creator"
+            android:textSize="12sp" />
 
-        </LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kenny"
+            android:textSize="12sp" />
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageButton
                 android:id="@+id/btn_home_back"
                 style="?android:attr/buttonBarButtonStyle"
@@ -94,9 +97,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Home Button"
-                android:src="@drawable/button_home"
-                android:scaleType="fitCenter"/>
-
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_home" />
 
             <ImageButton
                 android:id="@+id/mbutton"
@@ -106,8 +108,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Manager Button"
-                android:src="@drawable/button_manager_p"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_manager_p" />
 
             <ImageButton
                 android:id="@+id/cbutton"
@@ -117,8 +119,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Creator Button"
-                android:src="@drawable/button_creator"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_creator" />
 
             <ImageButton
                 android:id="@+id/kbutton"
@@ -128,13 +130,19 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Kenny Button"
-                android:src="@drawable/button_kenny"
-                android:scaleType="fitCenter"/>
-
-
-
-
-
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_kenny" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCleanup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cleanup"
+        android:backgroundTint="#b0356c"
+        android:textColor="#FFFFFF"
+        android:layout_above="@id/buttonLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
 </RelativeLayout>

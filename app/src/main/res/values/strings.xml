@@ -4,7 +4,14 @@
     <string name="menu">Menu</string>
     <string name="aboutApp">This app is meant to help people with forming good habits and preserving them   xd</string>
     <string name="habitat">HABITAT</string>
-    <string name="isYourHabitGood">your habitat is good / bad</string>
+    <string name="isYourHabitGood">El Placeholdero</string>
+    <string-array name="isYourHabitGood">
+        <item>Your habitat is poor</item>
+        <item>Your habitat is fine</item>
+        <item>Your habitat is good</item>
+        <item>Your habitat is great</item>
+        <item>Your habitat is thriving!</item>
+    </string-array>
     <string name="frog">frog</string>
     <string name="drink_some_water_your_lips_dry">Hourly tip</string>
     <string name="background_graphic_gets_better_with_more_habits">(background graphic gets better with more habits)</string>
@@ -28,7 +35,6 @@
     <string-array name="frequencies">
         <item>daily</item>
         <item>weekly</item>
-        <item>weekends</item>
         <item>biweekly</item>
         <item>monthly</item>
     </string-array>
