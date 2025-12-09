@@ -12,6 +12,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -122,18 +123,24 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         adapter = new HabitAdapter(this, activeHabits);
         recyclerView.setAdapter(adapter);
 
+        ImageView myImage = findViewById(R.id.imgFrog);
         TextView myTextView2 = findViewById(R.id.tvSubtitle);
         String[] feedback = getResources().getStringArray(R.array.isYourHabitGood);
-        if (list.size() <= 1)
+        if (list.size() <= 1){
             myTextView2.setText(feedback[0]);
-        else if (list.size() <= 3)
+            myImage.setImageResource(R.drawable.kenbad);}
+        else if (list.size() <= 3){
             myTextView2.setText(feedback[1]);
-        else if (list.size() <= 5)
+            myImage.setImageResource(R.drawable.kenfine);}
+        else if (list.size() <= 5){
             myTextView2.setText(feedback[2]);
-        else if (list.size() <= 7)
+            myImage.setImageResource(R.drawable.kengood);}
+        else if (list.size() <= 7){
             myTextView2.setText(feedback[3]);
-        else
+            myImage.setImageResource(R.drawable.kengreat);}
+        else{
             myTextView2.setText(feedback[4]);
+            myImage.setImageResource(R.drawable.kenthrive);}
 
         if (isSensorPresent) {
             sensorManager.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI);
