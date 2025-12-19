@@ -2,8 +2,10 @@ package com.example.introductiontomobilesystems;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -70,5 +72,12 @@ public class ManagerActivity extends AppCompatActivity {
 
         adapter = new ManagerAdapter(this, list);
         recyclerView.setAdapter(adapter);
+
+        ImageView imgMore = findViewById(R.id.imgMore);
+        if (list.size() < 4) {
+            imgMore.setVisibility(View.VISIBLE);
+        } else {
+            imgMore.setVisibility(View.GONE);
+        }
     }
 }

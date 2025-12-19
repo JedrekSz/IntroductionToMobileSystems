@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             isSensorPresent = false;
         }
         checkPermission();
+
     }
 
     private void checkPermission() {
@@ -87,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.ACTIVITY_RECOGNITION},
                         100);
+            }
+            if (androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+                    != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                androidx.core.app.ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.POST_NOTIFICATIONS}, 101);
             }
         }
 
@@ -122,6 +127,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         adapter = new HabitAdapter(this, activeHabits);
         recyclerView.setAdapter(adapter);
+
+        ImageView imgMore = findViewById(R.id.imgMore);
+        if (activeHabits.size() < 4) {
+            imgMore.setVisibility(View.VISIBLE);
+        } else {
+            imgMore.setVisibility(View.GONE);
+        }
 
         ImageView myImage = findViewById(R.id.imgFrog);
         TextView myTextView2 = findViewById(R.id.tvSubtitle);

@@ -6,153 +6,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:id="@+id/activity_profile"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".ProfileActivity">
-
     <LinearLayout
+        android:id="@+id/activity_profile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="12dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_above="@id/buttonLayout"
+        tools:context=".ProfileActivity">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HABITAT"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tvHeader"
-            android:layout_width="0dp"
+            android:id="@+id/tvProfileText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="HABITAT"
+            android:text="Kenny's Fun Facts"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/funFact"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/kenny_s_fun_facts"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgFrog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/frog"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kenny" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btn_habits"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Habit Facts"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"/>
+
+            <Button
+                android:id="@+id/btn_frog_facts"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Frog Facts"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"/>
+        </LinearLayout>
 
     </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/tvProfileText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kenny's Fun Facts"
-        android:padding="12dp"
-
-        android:layout_marginBottom="16dp"/>
-    <TextView
-    android:id="@+id/funFact"
-        android:textSize="22sp"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:text="@string/kenny_s_fun_facts"
-    android:padding="12dp"
-    android:background="@android:drawable/edit_text"
-    android:layout_marginBottom="16dp"/>
-
-
-
-
-    <ImageView
-        android:id="@+id/imgFrog"
-        android:layout_width="match_parent"
-        android:layout_height="251dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/frog"
-        android:src="@drawable/kenny" />
-
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="24dp">
-
-       <!-- <Button
-            android:id="@+id/btn_personalized"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/personalized"
-            android:layout_marginEnd="8dp" /> -->
-
-        <Button
-            android:id="@+id/btn_habits"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Habit Facts"
-            android:backgroundTint="@color/purple_500"
-            android:textColor="@android:color/white"
-            android:padding="12dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginHorizontal="8dp"/>
-
-        <Button
-            android:id="@+id/btn_frog_facts"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Frog Facts"
-            android:backgroundTint="@color/purple_500"
-            android:textColor="@android:color/white"
-            android:padding="12dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginHorizontal="8dp"/>
-    </LinearLayout>
-
-
-    <!--<LinearLayout
-        android:id="@+id/bottom_nav"
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:background="@color/teal_200"
-        android:gravity="center"
-        android:layout_gravity="bottom">
-
-        <Button
-            android:id="@+id/btn_nav_home"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/home" />
-
-        <Button
-            android:id="@+id/btn_nav_list"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/habit_list" />
-
-        <Button
-            android:id="@+id/btn_nav_new"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/newHabitButton" />
-
-        <Button
-            android:id="@+id/btn_nav_profile"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/profileButton"/>
-    </LinearLayout>-->
-
-</LinearLayout>
 
     <LinearLayout
         android:id="@+id/buttonLayout"

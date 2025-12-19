@@ -34,6 +34,23 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/kenmore"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:contentDescription="More habits needed"
+        android:layout_marginTop="16dp"/>
+
 </LinearLayout>
 
     <LinearLayout

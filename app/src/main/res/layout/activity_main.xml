@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 <LinearLayout
     android:id="@+id/mainLayout"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -30,8 +30,9 @@
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/isYourHabitGood"
-        android:layout_marginTop="4dp" />
+        android:textSize="20sp"/>
 
 
     <LinearLayout
@@ -89,7 +90,7 @@
     <ImageView
         android:id="@+id/imgFrog"
         android:layout_width="345dp"
-        android:layout_height="111dp"
+        android:layout_height="200dp"
 
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
@@ -115,7 +116,20 @@
             android:text="@string/habit_list" />-->
     </LinearLayout>
     <!--android:layout_weight="1"-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/kenmore"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:contentDescription="More habits needed"
+        android:layout_marginTop="16dp"/>
 
 
 </LinearLayout>

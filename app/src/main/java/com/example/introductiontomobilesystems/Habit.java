@@ -52,6 +52,7 @@ public class Habit {
 
         switch (frequency) {
             case "Daily":
+                cal.add(Calendar.MINUTE, 15);
                 break;
             case "Weekly":
                 cal.add(Calendar.DAY_OF_YEAR, 7);
@@ -63,7 +64,7 @@ public class Habit {
                 cal.add(Calendar.MONTH, 1);
                 break;
             default:
-                cal.add(Calendar.DAY_OF_YEAR, 1);
+                cal.add(Calendar.MINUTE, 15);
                 break;
         }
         return cal.getTimeInMillis();

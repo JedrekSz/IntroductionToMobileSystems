@@ -63,7 +63,7 @@ public class HabitWorker extends Worker {
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, channelId)
-                .setSmallIcon(R.drawable.kenny)
+                .setSmallIcon(android.R.drawable.ic_popup_reminder)
                 .setContentTitle("Help your habitat prosper!")
                 .setContentText("Time to " + habitName)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
