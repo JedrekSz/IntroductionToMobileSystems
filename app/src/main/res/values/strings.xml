@@ -46,14 +46,47 @@
         <item>Boneless chicken</item>
     </string-array>
     <string-array name="habit_facts">
-        <item>Habit good</item>
-        <item>Idk ask gemini xddddddd</item>
+        <item>Small habits done daily matter more than big changes done rarely</item>
+        <item>Habits form faster when they are tied to an existing routine</item>
+        <item>Consistency is more important than motivation when building habits</item>
+        <item>Most habits are triggered by a specific cue or environment</item>
+        <item>Tracking a habit increases the chance of sticking to it</item>
+        <item>Bad habits are often easier to replace than to completely remove</item>
+        <item>Habits require less willpower once they become automatic</item>
+        <item>Morning habits tend to stick better than evening ones</item>
+        <item>Environment design can make or break a habit</item>
+        <item>Missing a habit once does not ruin progress, quitting does</item>
+        <item>Habits usually take weeks, not days, to become automatic</item>
+        <item>Simple habits are more sustainable than complex ones</item>
+        <item>Rewarding yourself reinforces habit formation</item>
+        <item>Stress often triggers old habits, even unwanted ones</item>
+        <item>Habits shape identity over time</item>
+        <item>Changing one keystone habit can improve multiple areas of life</item>
+        <item>Social support increases habit success rates</item>
+        <item>Habits work best when goals are clear and specific</item>
+        <item>Visual reminders help habits stay top of mind</item>
+        <item>Habits grow stronger when linked to personal values</item>
     </string-array>
     <string-array name="frog_facts">
-        <item>Frogger Overwatch 2</item>
-        <item>Bazinga</item>
-        <item>Meow</item>
-        <item>Ribbit</item>
-        <item>The Fitness Gram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. </item>
+        <item>Frogs do not drink water — they absorb it through their skin</item>
+        <item>Some frogs can breathe through their skin as well as their lungs</item>
+        <item>Frogs were on Earth long before dinosaurs went extinct</item>
+        <item>Not all frogs jump — some prefer walking or climbing</item>
+        <item>A group of frogs is sometimes called an army</item>
+        <item>Frogs shed their skin and often eat it</item>
+        <item>Tree frogs have sticky toe pads that work like natural suction cups</item>
+        <item>Frogs help control insect populations, including mosquitoes</item>
+        <item>Some frogs can freeze solid and survive winter</item>
+        <item>Brightly colored frogs are often toxic, not fashionable</item>
+        <item>Frogs blink to help swallow their food</item>
+        <item>Not all frogs croak — some chirp, squeak, or whistle</item>
+        <item>Frogs have excellent night vision</item>
+        <item>One frog species can lay over 20,000 eggs at once</item>
+        <item>Frogs are considered environmental indicator species</item>
+        <item>Some frogs can jump over 20 times their body length</item>
+        <item>Frogs cannot chew their food</item>
+        <item>Despite the fairy tales, kissing frogs rarely leads to royalty</item>
+        <item>Frog calls are unique enough to identify individuals</item>
+        <item>Many frog species are threatened by habitat loss</item>
     </string-array>
 </resources>

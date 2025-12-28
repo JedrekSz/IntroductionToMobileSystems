@@ -95,9 +95,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         }
 
-        PeriodicWorkRequest habitCheckRequest =
-                new PeriodicWorkRequest.Builder(HabitWorker.class, 15, TimeUnit.MINUTES)
-                        .build();
+        PeriodicWorkRequest habitCheckRequest = new PeriodicWorkRequest.Builder(HabitWorker.class, 15, TimeUnit.MINUTES).build();
 
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
                 "HABIT_CHECKER_WORK",
