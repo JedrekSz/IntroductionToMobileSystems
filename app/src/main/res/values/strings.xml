@@ -39,11 +39,11 @@
         <item>monthly</item>
     </string-array>
     <string-array name="home_tips">
-        <item>Drink some water, your lips dry</item>
-        <item>Take a hike lad</item>
+        <item>Drink some water</item>
+        <item>Take a quick walk</item>
         <item>Get enough rest</item>
         <item>Organize your work</item>
-        <item>Boneless chicken</item>
+        <item>Eat healthy</item>
     </string-array>
     <string-array name="habit_facts">
         <item>Small habits done daily matter more than big changes done rarely</item>
