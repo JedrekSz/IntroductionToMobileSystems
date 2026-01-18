@@ -1,139 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:id="@+id/mainLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@color/bg"
-    android:layout_above="@id/buttonLayout"
-    tools:context=".MainActivity">
-
-
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/habitat"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/isYourHabitGood"
-        android:textSize="20sp"/>
-
-
     <LinearLayout
+        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical">
-
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/bg"
+        android:layout_above="@id/buttonLayout"
+        tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/tvBubble"
-            android:layout_width="0dp"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/drink_some_water_your_lips_dry"
-            android:background="@color/white"
-            android:padding="8dp"
-            android:layout_marginStart="8dp"
-            android:elevation="2dp" />
+            android:text="@string/habitat"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/isYourHabitGood"
+            android:textSize="20sp"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:padding="4dp"
-            android:background="@android:color/white"
-            android:elevation="2dp">
-
-            <TextView
-                android:id="@+id/tvSteps"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Steps"
-                android:textSize="10sp"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
-    <ImageView
-        android:id="@+id/imgFrog"
-        android:layout_width="345dp"
-        android:layout_height="200dp"
-
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/frog"
-        android:src="@drawable/kenny" />
-
-
-    <LinearLayout
-        android:layout_width="377dp"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvHabits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
 
-            android:layout_marginTop="8dp" />
-        <!--<Button
-            android:id="@+id/btnHabitList"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tvBubble"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drink_some_water_your_lips_dry"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:elevation="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="4dp"
+                android:background="@android:color/white"
+                android:elevation="2dp">
+
+                <TextView
+                    android:id="@+id/tvSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Steps"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgFrog"
+            android:layout_width="345dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/frog"
+            android:src="@drawable/kenny" />
+
+        <LinearLayout
+            android:layout_width="377dp"
             android:layout_height="wrap_content"
-            android:text="@string/habit_list" />-->
+            android:gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHabits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/kenevenmore"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:contentDescription="More habits needed"
+            android:layout_marginTop="16dp"/>
+
     </LinearLayout>
-    <!--android:layout_weight="1"-->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <ImageView
-        android:id="@+id/imgMore"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/kenmore"
-        android:visibility="gone"
-        android:scaleType="fitCenter"
-        android:contentDescription="More habits needed"
-        android:layout_marginTop="16dp"/>
-
-
-</LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/buttonLayout"
@@ -150,92 +130,20 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Home"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Manager"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Creator"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Kenny"
-                android:textSize="12sp"/>
-
-
-
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Home" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Manager" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Creator" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Kenny" android:textSize="12sp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/btn_home_back"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Home Button"
-                android:src="@drawable/button_home_p"
-                android:scaleType="fitCenter"/>
-
-
-            <ImageButton
-                android:id="@+id/mbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Manager Button"
-                android:src="@drawable/button_manager"
-                android:scaleType="fitCenter"/>
-
-            <ImageButton
-                android:id="@+id/cbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Creator Button"
-                android:src="@drawable/button_creator"
-                android:scaleType="fitCenter"/>
-
-            <ImageButton
-                android:id="@+id/kbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Kenny Button"
-                android:src="@drawable/button_kenny"
-                android:scaleType="fitCenter"/>
-
-
-
-
-
+            <ImageButton android:id="@+id/btn_home_back" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_home_p"/>
+            <ImageButton android:id="@+id/mbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_manager"/>
+            <ImageButton android:id="@+id/cbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_creator"/>
+            <ImageButton android:id="@+id/kbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_kenny"/>
         </LinearLayout>
     </LinearLayout>
 

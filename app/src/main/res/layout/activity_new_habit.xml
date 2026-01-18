@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/activity_new_habit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,140 +12,85 @@
         android:layout_above="@id/buttonLayout"
         tools:context=".NewHabitActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-
         <TextView
             android:id="@+id/tvHeader"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="HABITAT"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_habit"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etHabitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/habitName"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Frequency"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerFreq"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:entries="@array/frequencies"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchNotifs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgMiniFrog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/kenmore"
+            android:contentDescription="@string/newHabitImage"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="12dp"/>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/new_habit"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp"/>
-
-    <EditText
-        android:id="@+id/etHabitName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/habitName"
-        android:padding="12dp"
-        android:background="@android:drawable/edit_text"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Frequency"
-        android:gravity="center"
-        android:layout_marginBottom="24dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="16dp">
-
-
-
-
-        <Spinner
-            android:id="@+id/spinnerFreq"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:entries="@array/frequencies"/>
-    </LinearLayout>
-
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switchNotifs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/notifications"
-        android:layout_marginBottom="24dp"/>
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
-
-
-    <!--<LinearLayout
-        android:id="@+id/bottom_nav"
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:orientation="horizontal"
-        android:background="@color/teal_200"
-        android:gravity="center"
-        android:layout_gravity="bottom">
-
-        <Button
-            android:id="@+id/btn_nav_home"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/home" />
-
-        <Button
-            android:id="@+id/btn_nav_list"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/habitList" />
-
-        <Button
-            android:id="@+id/btn_nav_new"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/newHabit" />
-
-        <Button
-            android:id="@+id/btn_nav_profile"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/profile"/>
-    </LinearLayout>-->
-    <ImageView
-        android:id="@+id/imgMiniFrog"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/kenmore"
-        android:contentDescription="@string/newHabitImage"
-        android:scaleType="fitCenter"
-        android:layout_marginEnd="12dp"/>
-
-</LinearLayout>
     <LinearLayout
         android:id="@+id/buttonLayout"
         style="?android:attr/buttonBarStyle"
@@ -162,92 +106,20 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Home"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Manager"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Creator"
-                android:gravity="center"
-                android:textSize="12sp"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Kenny"
-                android:textSize="12sp"/>
-
-
-
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Home" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Manager" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Creator" android:gravity="center" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Kenny" android:textSize="12sp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/btn_home_back"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Home Button"
-                android:src="@drawable/button_home"
-                android:scaleType="fitCenter"/>
-
-
-            <ImageButton
-                android:id="@+id/mbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Manager Button"
-                android:src="@drawable/button_manager"
-                android:scaleType="fitCenter"/>
-
-            <ImageButton
-                android:id="@+id/cbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Creator Button"
-                android:src="@drawable/button_creator_p"
-                android:scaleType="fitCenter"/>
-
-            <ImageButton
-                android:id="@+id/kbutton"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:contentDescription="Kenny Button"
-                android:src="@drawable/button_kenny"
-                android:scaleType="fitCenter"/>
-
-
-
-
-
+            <ImageButton android:id="@+id/btn_home_back" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_home"/>
+            <ImageButton android:id="@+id/mbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_manager"/>
+            <ImageButton android:id="@+id/cbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_creator_p"/>
+            <ImageButton android:id="@+id/kbutton" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:adjustViewBounds="true" android:scaleType="fitCenter" android:src="@drawable/button_kenny"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
