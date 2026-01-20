@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="21dp"
         android:background="@color/bg"
         android:layout_above="@id/buttonLayout"
         tools:context=".MainActivity">
@@ -107,7 +107,7 @@
             android:id="@+id/imgMore"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/kenevenmore"
+            android:src="@drawable/kenmore"
             android:visibility="gone"
             android:scaleType="fitCenter"
             android:contentDescription="More habits needed"

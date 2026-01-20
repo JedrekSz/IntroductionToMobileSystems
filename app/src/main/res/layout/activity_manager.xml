@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/buttonLayout"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="21dp">
 
         <TextView
             android:id="@+id/tvHeader"
@@ -43,7 +43,7 @@
             android:adjustViewBounds="true"
             android:contentDescription="More habits needed"
             android:scaleType="fitCenter"
-            android:src="@drawable/kenevenmore"
+            android:src="@drawable/kenmore"
             android:visibility="gone" />
 
     </LinearLayout>
