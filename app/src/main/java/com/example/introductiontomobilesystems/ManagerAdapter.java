@@ -25,7 +25,6 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
     List<Habit> data;
     HabitsStorage storage;
     Context context;
-    // Callback to tell Activity to update the "KenMore" image
     Runnable onDeleteCallback;
 
     private final String[] frequencies = {"Daily", "Weekly", "Bi-Weekly", "Monthly"};
@@ -48,7 +47,6 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
     public void onBindViewHolder(@NonNull VH holder, int position) {
         Habit h = data.get(position);
 
-        // --- NAME EDITING ---
         holder.etName.setText(h.name);
         holder.etName.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -60,7 +58,6 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
             }
         });
 
-        // --- SPINNER SETUP ---
         ArrayAdapter<String> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, frequencies);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         holder.spinner.setAdapter(adapter);
@@ -77,8 +74,7 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
             @Override public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // --- SWITCHES ---
-        holder.switchActive.setOnCheckedChangeListener(null); // Prevent listener firing during recycle
+        holder.switchActive.setOnCheckedChangeListener(null);
         holder.switchActive.setChecked(h.active);
         holder.switchActive.setOnCheckedChangeListener((v, isChecked) -> {
             h.active = isChecked;
@@ -92,24 +88,18 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
             storage.save(data);
         });
 
-        // --- DELETE BUTTON LOGIC ---
-        // Reset button state whenever the view is rebound
         holder.btnDelete.setText("delete");
 
         holder.btnDelete.setOnClickListener(v -> {
             if (holder.btnDelete.getText().toString().equals("delete")) {
-                // First Click: Ask Confirmation
                 holder.btnDelete.setText("sure?");
 
-                // Auto-reset back to "delete" after 3 seconds
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                    // Check if view is still valid/attached to window
                     if (holder.btnDelete != null) {
                         holder.btnDelete.setText("delete");
                     }
                 }, 3000);
             } else {
-                // Second Click: Execute Delete
                 int actualPos = holder.getAdapterPosition();
                 if (actualPos != RecyclerView.NO_POSITION) {
                     data.remove(actualPos);
@@ -117,7 +107,6 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.VH> {
                     notifyItemRangeChanged(actualPos, data.size());
                     storage.save(data);
 
-                    // Trigger Activity to check image visibility
                     if (onDeleteCallback != null) {
                         onDeleteCallback.run();
                     }

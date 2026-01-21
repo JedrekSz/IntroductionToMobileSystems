@@ -26,8 +26,6 @@ public class ManagerActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvHabitList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Note: Old Cleanup Button logic removed entirely
-
         setupNavigation();
     }
 
@@ -36,7 +34,6 @@ public class ManagerActivity extends AppCompatActivity {
         super.onResume();
         List<Habit> list = storage.load();
 
-        // Pass the callback to the adapter: () -> checkImageVisibility(list)
         adapter = new ManagerAdapter(this, list, () -> checkImageVisibility(list));
         recyclerView.setAdapter(adapter);
 
