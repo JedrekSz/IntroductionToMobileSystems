@@ -25,7 +25,7 @@ public class HabitsStorage {
             list.add(new Habit("lorem ipsum","daily",true,false));
             list.add(new Habit("froggen machen","weekly",true,false));
             list.add(new Habit("water drinken","daily",true,true));
-            list.add(new Habit("tőzken scielen","weekends",false,false));
+            list.add(new Habit("something else","weekends",false,false));
             save(list);
             return list;
         }
